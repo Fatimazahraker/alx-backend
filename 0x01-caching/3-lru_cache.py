@@ -23,11 +23,11 @@ class LRUCache(BaseCaching):
 
             self.cache_data[key] = item
             self.order.append(key)
-    
+
     def get(self, key):
         """ Get an item by key (LRU algorithm) """
         if key is not None and key in self.cache_data:
-            # Move the accessed key to the end of the order to mark it as most recently used
+            # Move thee order to mark it as most recently used
             self.order.remove(key)
             self.order.append(key)
             return self.cache_data[key]
